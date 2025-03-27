@@ -141,7 +141,7 @@ strong:hover{
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        margin: 1cm;
+        margin: 0.7cm;
     }
 
     .left, .right {
