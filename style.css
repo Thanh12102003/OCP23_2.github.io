@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+    ), url('./images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 1cm 3cm 1cm 3cm;
+    background: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    opacity: 0.9;
+    line-height: 0.7cm;
+}
+
+.left, .right {
+    padding: 40px;
+}
+
+.left {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+}
+
+.left h1 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.left ul li::before {
+    content: "+";
+    position: absolute;
+    left: 0;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.right {
+    flex: 1;
+    min-width: 300px;
+    background: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 8px grey;
+}
+
+.form-box h3 {
+    color: #cc0000;
+    margin-bottom: 15px;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="tel"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-box .gender {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-box .gender label {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.form-box button {
+    background-color: #cc0000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #990000;
+}
+
+.note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
+strong{
+    color: #003366;
+    transition: color 0.3s ease-in-out;
+}
+
+strong:hover{
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 1cm;
+    }
+
+    .left, .right {
+        padding: 20px;
+    }
+
+    .form-box button {
+        font-size: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(0, 0, 76);
+        color: white;
+        height: auto;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.45cm;
+    }
+
+    footer b {
+        margin-top: 10px;
+    }
+
+    .left {
+        order: 2; /* Xuống sau */
+    }
+
+    .right {
+        order: 1; /* Lên trước */
+    }
+}
+
+@media (min-width: 768px) {
+    footer{
+        background-color: rgb(0, 0, 76);
+        color: white;
+        height: auto;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.45cm;
+    }
+
+    footer p{
+        margin-right: 3cm;
+        margin-left: 0.5cm;
+    }
+}
